@@ -1,0 +1,340 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #020024, #1f1f95, #3f8de7);
+
+    padding: 20px;
+
+}
+
+
+
+/* ......................login card...................... */
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ..............Card Entry Animation ................ */
+
+.login-card {
+    animation:
+        cardAppear 1s ease,
+        floatCard 4s ease-in-out infinite;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ............Login Card Float Effect............. */
+
+.login-card {
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+
+/* ...........Glowing Border............ */
+
+
+.login-card {
+    border: 1px solid rgba(21, 25, 250, 0.86);
+
+    box-shadow:
+        0 0 20px rgba(0, 157, 255, 0.3),
+        0 0 40px rgba(0, 157, 255, 0.2);
+}
+
+
+
+
+.login-card h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #777777;
+}
+
+.login-card p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #777777;
+}
+
+/* ................form input............... */
+
+.form-input input:hover {
+    transform: scale(1.02);
+}
+
+
+.form-input {
+    margin-bottom: 20px;
+}
+
+.form-input label {
+    display: block;
+    margin-bottom: 8px;
+    color: #777777;
+    font-weight: bold;
+}
+
+.form-input input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-input input:focus {
+    border-color: #5c5fabea;
+    box-shadow: 0 0 8px rgba(60, 79, 176, 0.3);
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #4157b8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    background-color: #203293;
+}
+
+
+/* ....................input-box..................... */
+
+.input-box {
+    position: relative;
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+}
+
+/* .........................responsive........................... */
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 25px;
+    }
+
+    .login-card h1 {
+        font-size: 28px;
+    }
+
+    .form-input input,
+    .login-card button {
+        padding: 10px;
+    }
+}
+
+/* .............................animation.............................. */
+
+
+.bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bubbles span {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: bubble 15s linear infinite;
+}
+
+
+
+.bubbles span:nth-child(1) {
+    left: 10%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.bubbles span:nth-child(2) {
+    left: 25%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+.bubbles span:nth-child(3) {
+    left: 40%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+
+.bubbles span:nth-child(4) {
+    left: 55%;
+    width: 70px;
+    height: 70px;
+    animation-duration: 16s;
+    animation-delay: 1s;
+}
+
+.bubbles span:nth-child(5) {
+    left: 70%;
+    width: 50px;
+    height: 50px;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
+
+.bubbles span:nth-child(6) {
+    left: 80%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 18s;
+    animation-delay: 5s;
+}
+
+.bubbles span:nth-child(7) {
+    left: 90%;
+    width: 35px;
+    height: 35px;
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+
+.bubbles span:nth-child(8) {
+    left: 50%;
+    width: 55px;
+    height: 55px;
+    animation-duration: 13s;
+    animation-delay: 6s;
+}
+
+
+.bubbles span {
+    animation: bubble linear infinite;
+}
+
+
+@keyframes bubble {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+
+/* ....................image..................... */
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+    margin-bottom: 15px;
+}
+
+.avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 4px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow:
+        0 0 20px rgba(0, 157, 255, 0.5),
+        0 0 40px rgba(0, 157, 255, 0.3);
+}
+
+.login-card {
+    padding-top: 25px;
+}
+
+/* .....................js....................... */
+
+#message {
+    min-height: 20px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin-bottom: 12px;
+}
+
+.success {
+    color: #00d26a;
+    text-shadow: 0 0 8px rgba(0, 210, 106, 0.3);
+}
+
+.error {
+    color: #ff5c5c;
+    text-shadow: 0 0 8px rgba(255, 92, 92, 0.3);
+}
