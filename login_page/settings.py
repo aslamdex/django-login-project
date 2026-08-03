@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-zea(8v&ie^vfp_65msbj664ds-$5-b$e0$(nh2%tmejfv6j(ko
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    
+
     ".vercel.app",
     "127.0.0.1",
     "localhost",
@@ -121,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
